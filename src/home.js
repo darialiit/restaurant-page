@@ -12,7 +12,7 @@ function createHome() {
         className: "header"
     })
     const title = createElement('h1', {
-        textContent: 'Prosto Caffee!'
+        textContent: 'Prosto Caffee'
     });
     const nav = createElement('div', {
         className: "nav"
@@ -46,6 +46,18 @@ function createHome() {
     const cta = createElement('h3', {
         textContent: "Your Coffee Haven – Visit Prosto Caffee!"
     })
+    const about = createElement('p', {
+        textContent: "In the heart of the city, Prosto Caffee stands as your cozy corner for coffee and conversation. Step into a warm and inviting space, filled with the aroma of freshly ground beans and the embrace of comfortable seating."
+    })
+    const about2 = createElement('p', {
+        textContent: "Whether you're seeking solitude for focused work, a place to engage in stimulating conversations, or simply to enjoy a delightful cup of coffee, Prosto Caffee welcomes you. With an ambiance designed for comfort and creativity, we invite you to make every visit a memorable moment in our caffeinated haven."
+    })
+
+    intro.appendChild(cta);
+    intro.appendChild(about);
+    intro.appendChild(about2);
+    main.appendChild(intro);
+    content.appendChild(main);
 
 
     // footer
