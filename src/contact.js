@@ -14,14 +14,17 @@ function createContact() {
         className: "nav"
     });
     const homePage = createElement('h2', {
-        textContent: "Home"
+        textContent: "Home",
+        id: 'tabHome'
     });
     const menuPage = createElement('h2', {
-        textContent: "Menu"
+        textContent: "Menu",
+        id: 'tabMenu'
     });
     const contactPage = createElement('h2', {
         textContent: "Contact",
-        className: "tabChosen"
+        className: "tabChosen",
+        id: 'tabContact'
     });
 
     nav.appendChild(homePage)

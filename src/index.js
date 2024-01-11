@@ -1,16 +1,32 @@
-
 import { createHome } from "./home";
-//createHome();
-
 import { createMenu } from "./menu";
-// createMenu();
-
 import { createContact } from "./contact";
-createContact();
-
-
 import "./style.css";
 
-console.log("hello there");
+(function() {  
 
-// logics of switching between the files 
+createHome();
+
+document.addEventListener('click', updatePage)
+
+function updatePage() {
+    const content = document.querySelector('#content');
+    const navs = document.querySelectorAll('h2');
+
+    navs.forEach(nav => {
+        nav.addEventListener('click', () => {
+            if(nav.id == 'tabMenu') {
+                content.innerHTML = '';
+                createMenu();
+            } else if(nav.id == 'tabContact') {
+                content.innerHTML = '';
+                createContact();
+            } else {
+                content.innerHTML = '';
+                createHome();
+            }
+        })
+    })
+}
+    
+})();

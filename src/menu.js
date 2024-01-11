@@ -14,14 +14,17 @@ function createMenu(){
         className: "nav"
     });
     const homePage = createElement('h2', {
-        textContent: "Home"
+        textContent: "Home",
+        id: 'tabHome'
     });
     const menuPage = createElement('h2', {
         textContent: "Menu",
-        className: "tabChosen"
+        className: "tabChosen",
+        id: 'tabMenu'
     });
     const contactPage = createElement('h2', {
-        textContent: "Contact"
+        textContent: "Contact",
+        id: 'tabContact'
     });
 
     nav.appendChild(homePage)

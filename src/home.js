@@ -18,13 +18,16 @@ function createHome() {
     });
     const homePage = createElement('h2', {
         textContent: "Home",
-        className: "tabChosen"
+        className: "tabChosen",
+        id: 'tabHome'
     });
     const menuPage = createElement('h2', {
-        textContent: "Menu"
+        textContent: "Menu",
+        id: 'tabMenu'
     });
     const contactPage = createElement('h2', {
-        textContent: "Contact"
+        textContent: "Contact",
+        id: 'tabContact'
     });
 
     nav.appendChild(homePage)
