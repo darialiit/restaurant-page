@@ -1,12 +1,14 @@
 import {createElement} from "./home";
 
+(function() {
+
 function createMenu(){
     const content = document.getElementById('content');
 
     // create the header (same for all)
     const header = createElement('div', {
         className: "header"
-    })
+    });
     const title = createElement('h1', {
         textContent: 'Prosto Cafe'
     });
@@ -27,14 +29,14 @@ function createMenu(){
         id: 'tabContact'
     });
 
-    nav.appendChild(homePage)
-    nav.appendChild(menuPage)
-    nav.appendChild(contactPage)
+    nav.appendChild(homePage);
+    nav.appendChild(menuPage);
+    nav.appendChild(contactPage);
     
-    header.appendChild(title)
-    header.appendChild(nav)
+    header.appendChild(title);
+    header.appendChild(nav);
 
-    content.appendChild(header)
+    content.appendChild(header);
 
     // content
     const main = createElement('div', {
@@ -80,7 +82,7 @@ function createMenu(){
 
         teaBlock.appendChild(teaElement);
         teaBlock.appendChild(priceElement);
-    })
+    });
 
     const foodData = [
         { name: 'Avocado Toast Deluxe', price: 'R$ 13' },
@@ -99,7 +101,7 @@ function createMenu(){
 
         foodBlock.appendChild(foodElement);
         foodBlock.appendChild(priceElement);
-    })
+    });
 
     const dessertData = [
         { name: 'Chocolate Fondue Delight', price: 'R$ 17' },
@@ -120,30 +122,29 @@ function createMenu(){
         dessertBlock.appendChild(priceElement);
     })
 
-
-
-
     menu.appendChild(coffeeBlock);
     menu.appendChild(teaBlock);
     menu.appendChild(foodBlock);
     menu.appendChild(dessertBlock);
-    main.appendChild(menu)
+    main.appendChild(menu);
     content.appendChild(main);
 
     // footer - same for all
     const footer = createElement('div', {
         className: "footer"
-    })
+    });
     const sign = createElement('a', {
         id: "signature",
         href: "https://github.com/darialiit",
         textContent: "designed by @darialiit",
         target: '_blank'
-    })
+    });
 
     footer.appendChild(sign);
     content.appendChild(footer);
 
 }
 
-export {createMenu}
+})();
+
+export {createMenu};
