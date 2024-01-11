@@ -1,8 +1,13 @@
-// import {addContent} from './content.js';
-// addContent();
 
 import { createHome } from "./home";
-createHome();
+//createHome();
+
+import { createMenu } from "./menu";
+// createMenu();
+
+import { createContact } from "./contact";
+createContact();
+
 
 import "./style.css";
 

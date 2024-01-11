@@ -23,11 +23,19 @@ h2 {
     color: white;
 }
 
+h2:hover {
+    cursor: pointer;
+}
+
 .nav {
     display: flex;
-    gap: 18px;
+    gap: 24px;
     justify-content: center;
     background-color: #3C3419;
+}
+
+.tabChosen {
+    text-decoration: underline;
 }
 
 #content {
@@ -74,3 +82,95 @@ a {
     text-decoration: none;
     color: white;
 }
+
+/* menu page */
+
+.menu {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.block {
+    background-color: #e9dfda;
+    border: 2px solid #3C3419;
+    border-radius: 10px;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.priceBold {
+    font-weight: 600;
+}
+
+/* contact page */
+
+.contact {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    background-color: #e9dfda;
+    border: 2px solid #3C3419;
+    border-radius: 10px;
+    padding: 40px 20px;
+    height: 70%;
+    width: 40%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+#address,
+#hours,
+#phone {
+    font-size: 20px;
+}
+
+
+#address::before {
+    background-image: url(address.png);
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    background-size: cover;
+    vertical-align: middle; 
+}
+
+#hours::before {
+    background-image: url(time.png);
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    background-size: cover;
+    vertical-align: middle; 
+}
+
+#phone::before {
+    background-image: url(phone.png);
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    background-size: cover;
+    vertical-align: middle; 
+}
+
+#map {
+    height: 400px;
+    width: 400px;
+    border: 1px solid #3C3419;
+    border-radius: 10px;    
+}   

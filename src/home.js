@@ -1,5 +1,4 @@
 // function to create the elements
-
 function createElement(tag, attributes = {}) {
     return Object.assign(document.createElement(tag), attributes);
 }
@@ -12,13 +11,14 @@ function createHome() {
         className: "header"
     })
     const title = createElement('h1', {
-        textContent: 'Prosto Caffee'
+        textContent: 'Prosto Cafe'
     });
     const nav = createElement('div', {
         className: "nav"
     });
     const homePage = createElement('h2', {
-        textContent: "Home"
+        textContent: "Home",
+        className: "tabChosen"
     });
     const menuPage = createElement('h2', {
         textContent: "Menu"
@@ -60,7 +60,7 @@ function createHome() {
     content.appendChild(main);
 
 
-    // footer
+    // footer - same for all
     const footer = createElement('div', {
         className: "footer"
     })
@@ -77,3 +77,4 @@ function createHome() {
 }
 
 export {createHome}
+export {createElement}
