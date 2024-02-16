@@ -1,38 +1,37 @@
-import {createElement} from "./home";
+import { createElement } from './home';
 
-(function(){
-
-function createContact() {
+(function () {
+  function createContact() {
     const content = document.getElementById('content');
-    
+
     // create the header (same for all)
     const header = createElement('div', {
-        className: "header"
+      className: 'header',
     });
     const title = createElement('h1', {
-        textContent: 'Prosto Cafe'
+      textContent: 'Prosto Cafe',
     });
     const nav = createElement('div', {
-        className: "nav"
+      className: 'nav',
     });
     const homePage = createElement('h2', {
-        textContent: "Home",
-        id: 'tabHome'
+      textContent: 'Home',
+      id: 'tabHome',
     });
     const menuPage = createElement('h2', {
-        textContent: "Menu",
-        id: 'tabMenu'
+      textContent: 'Menu',
+      id: 'tabMenu',
     });
     const contactPage = createElement('h2', {
-        textContent: "Contact",
-        className: "tabChosen",
-        id: 'tabContact'
+      textContent: 'Contact',
+      className: 'tabChosen',
+      id: 'tabContact',
     });
 
     nav.appendChild(homePage);
     nav.appendChild(menuPage);
     nav.appendChild(contactPage);
-    
+
     header.appendChild(title);
     header.appendChild(nav);
 
@@ -40,32 +39,32 @@ function createContact() {
 
     // main part
     const main = createElement('div', {
-        className: "main"
+      className: 'main',
     });
     const contact = createElement('div', {
-        className: 'contact'
+      className: 'contact',
     });
     const address = createElement('p', {
-        textContent: 'Florianopolis, Brazil',
-        id: 'address'
+      textContent: 'Florianopolis, Brazil',
+      id: 'address',
     });
     const hours = createElement('p', {
-        textContent: 'everyday: 7am - 10pm',
-        id: 'hours'
+      textContent: 'everyday: 7am - 10pm',
+      id: 'hours',
     });
     const phone = createElement('p', {
-        textContent: '48-99111-9911',
-        id: 'phone'
+      textContent: '48-99111-9911',
+      id: 'phone',
     });
 
     const info = createElement('div', {
-        className: 'info'
+      className: 'info',
     });
     const map = createElement('iframe', {
-        src: 'https://maps.google.com/maps?q=Florianopolis&t=&z=10&ie=UTF8&iwloc=&output=embed',
-        frameborder: 0,
-        scrolling: 'no',
-        id: 'map'
+      src: 'https://maps.google.com/maps?q=Florianopolis&t=&z=10&ie=UTF8&iwloc=&output=embed',
+      frameborder: 0,
+      scrolling: 'no',
+      id: 'map',
     });
 
     info.appendChild(address);
@@ -80,19 +79,18 @@ function createContact() {
 
     // footer - same for all
     const footer = createElement('div', {
-        className: "footer"
+      className: 'footer',
     });
     const sign = createElement('a', {
-        id: "signature",
-        href: "https://github.com/darialiit",
-        textContent: "designed by @darialiit",
-        target: '_blank'
+      id: 'signature',
+      href: 'https://github.com/dasha-solomkina',
+      textContent: 'designed by @dasha-solomkina',
+      target: '_blank',
     });
 
     footer.appendChild(sign);
     content.appendChild(footer);
-}
-
+  }
 })();
 
-export {createContact};
+export { createContact };
